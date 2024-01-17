@@ -15,6 +15,7 @@ import {
   Text,
   useColorScheme,
   View,
+  Button,
 } from 'react-native';
 
 import {
@@ -25,12 +26,17 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {NativeModules} from 'react-native';
+
+const {RazorpayModule} = NativeModules;
+
 type SectionProps = PropsWithChildren<{
   title: string;
 }>;
 
 function Section({children, title}: SectionProps): JSX.Element {
   const isDarkMode = useColorScheme() === 'dark';
+
   return (
     <View style={styles.sectionContainer}>
       <Text
@@ -62,6 +68,36 @@ function App(): JSX.Element {
     backgroundColor: isDarkMode ? Colors.darker : Colors.lighter,
   };
 
+  const onPress = async () => {
+    console.log('We will invoke the native module here!');
+    // const res = await RazorpayModule.printOrderAndAmount(
+    //   'order_skjdksjdbskdjb',
+    //   1000.8,
+    // );
+    // console.log(res);
+    const data = {
+      amount: 10000,
+      currency: 'INR',
+      prefill: {
+        contact: '9731585653',
+        email: 'vivekshindherzp@gmail.com',
+      },
+      theme: {
+        color: '#0CA72F',
+      },
+      send_sms_hash: true,
+      retry: {
+        enabled: false,
+        max_count: 4,
+      },
+      disable_redesign_v15: false,
+      'experiments.upi_turbo': true,
+      ep: 'https://api-web-turbo-upi.ext.dev.razorpay.in/test/checkout.html?branch=feat/upi-turbo',
+    };
+    console.log('Calling Razorpay Checkout');
+    RazorpayModule.open();
+  };
+
   return (
     <SafeAreaView style={backgroundStyle}>
       <StatusBar
@@ -72,6 +108,8 @@ function App(): JSX.Element {
         contentInsetAdjustmentBehavior="automatic"
         style={backgroundStyle}>
         <Header />
+
+        <Button title="Pay with Razorpay" color="#0CA72F" onPress={onPress} />
         <View
           style={{
             backgroundColor: isDarkMode ? Colors.black : Colors.white,
