@@ -75,17 +75,12 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
          */
         try {
             JSONObject options = new JSONObject();
-            options.put("key", "rzp_test_V5AtnjYvupQXm1");
-//            options.put("name", "Merchant Name");
-//            options.put("description", "Reference No. #123456");
-//            options.put("image", "https://s3.amazonaws.com/rzp-mobile/images/rzp.jpg");
-//            options.put("order_id", "order_DBJOWzybf0sJbb");//from response of step 3.
-
+            options.put("key", "rzp_test_vacN5cmVqNIlhO");
             options.put("currency", "INR");
             options.put("amount", "10000");//pass amount in currency subunits
             JSONObject prefillObj = new JSONObject();
-            options.put("prefill.email", "vivekshindherzp@gmail.com");
-            options.put("prefill.contact","9731585653");
+            options.put("prefill.email", "shashank@numadic.com");
+            options.put("prefill.contact","8587099540");
             options.put("theme.color", "#FF7B05");
             options.put("send_sms_hash", true);
             JSONObject retryObj = new JSONObject();
@@ -94,17 +89,7 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
             options.put("retry", retryObj);
             options.put("disable_redesign_v15", false);
             options.put("experiments.upi_turbo", true);
-            options.put("ep", "https://api-web-turbo-upi.ext.dev.razorpay.in/test/checkout.html?branch=feat/upi-turbo");
-//            JSONObject readOnlyObj = new JSONObject();
-//            readOnlyObj.put("contact", true);
-//            options.put("readonly", readOnlyObj);
-//            JSONObject optionsJSON = Utils.readableMapToJson(options);
-
-//            checkout.open(currentActivity, options);
-//            Intent intent = new Intent(currentActivity, CheckoutActivity.class);
-//            intent.putExtra("OPTIONS", options.toString());
-//            intent.putExtra("FRAMEWORK", "react_native");
-//            currentActivity.startActivityForResult(intent, Checkout.RZP_REQUEST_CODE);
+            options.put("ep", "https://api-web-turbo-upi.ext.dev.razorpay.in/test/checkout.html");
 
             Checkout checkout = new Checkout().upiTurbo(currentActivity);
             if (options.has("key")) {
