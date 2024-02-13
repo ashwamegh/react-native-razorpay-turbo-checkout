@@ -79,8 +79,9 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
             options.put("currency", "INR");
             options.put("amount", "10000");//pass amount in currency subunits
             JSONObject prefillObj = new JSONObject();
-            options.put("prefill.email", "shashank@numadic.com");
-            options.put("prefill.contact","8587099540");
+            prefillObj.put("email", "shashank@numadic.com");
+            prefillObj.put("contact", "8587099540");
+            options.put("prefill", prefillObj);
             options.put("theme.color", "#FF7B05");
             options.put("send_sms_hash", true);
             JSONObject retryObj = new JSONObject();
