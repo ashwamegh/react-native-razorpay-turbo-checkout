@@ -16,6 +16,14 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		988C1ACE2B7B7654008EF5C4 /* RazorpayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C1ACD2B7B7654008EF5C4 /* RazorpayModule.swift */; };
 		988C1AD02B7B7825008EF5C4 /* RazorpayModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 988C1ACF2B7B7825008EF5C4 /* RazorpayModule.m */; };
+		98AF4C832BCE6A600028E9BD /* MockBankSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */; };
+		98AF4C842BCE6A600028E9BD /* MockBankSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98AF4C852BCE6A600028E9BD /* TurboUpiPluginMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */; };
+		98AF4C862BCE6A600028E9BD /* TurboUpiPluginMock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98AF4C872BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */; };
+		98AF4C882BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98AF4C892BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */; };
+		98AF4C8A2BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +35,23 @@
 			remoteInfo = AwesomeProject;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		985C46342BC5CF4E008DCAB7 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				98AF4C882BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Embed Frameworks */,
+				98AF4C842BCE6A600028E9BD /* MockBankSDK.xcframework in Embed Frameworks */,
+				98AF4C862BCE6A600028E9BD /* TurboUpiPluginMock.framework in Embed Frameworks */,
+				98AF4C8A2BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* AwesomeProjectTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = AwesomeProjectTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -48,7 +73,10 @@
 		988C1ACC2B7B7654008EF5C4 /* AwesomeProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		988C1ACD2B7B7654008EF5C4 /* RazorpayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazorpayModule.swift; sourceTree = "<group>"; };
 		988C1ACF2B7B7825008EF5C4 /* RazorpayModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RazorpayModule.m; sourceTree = "<group>"; };
-		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
+		98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MockBankSDK.xcframework; path = "RZP-UAT/Mock/MockBankSDK.xcframework"; sourceTree = "<group>"; };
+		98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TurboUpiPluginMock.framework; path = "RZP-UAT/Mock/TurboUpiPluginMock.framework"; sourceTree = "<group>"; };
+		98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazorpayTurboUPIUI_MockBankSDK.framework; path = "RZP-UAT/Mock/RazorpayTurboUPIUI_MockBankSDK.framework"; sourceTree = "<group>"; };
+		98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazorpayTurboUPI_MockBankSDK.framework; path = "RZP-UAT/Mock/RazorpayTurboUPI_MockBankSDK.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -64,7 +92,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				98AF4C832BCE6A600028E9BD /* MockBankSDK.xcframework in Frameworks */,
+				98AF4C852BCE6A600028E9BD /* TurboUpiPluginMock.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-AwesomeProject.a in Frameworks */,
+				98AF4C872BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Frameworks */,
+				98AF4C892BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -104,7 +136,10 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
+				98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */,
+				98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */,
+				98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */,
+				98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-AwesomeProject.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeProject-AwesomeProjectTests.a */,
 			);
@@ -192,6 +227,7 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				985C46342BC5CF4E008DCAB7 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
@@ -444,6 +480,10 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RZP-UAT",
+				);
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -473,6 +513,10 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/RZP-UAT",
+				);
 				INFOPLIST_FILE = AwesomeProjectTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -498,7 +542,16 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7745G734M;
 				ENABLE_BITCODE = NO;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/UAT",
+					"$(PROJECT_DIR)/RZP-UAT",
+					"$(PROJECT_DIR)/RZP_UAT",
+					"$(PROJECT_DIR)/RZP-UAT/Mock",
+					"$(PROJECT_DIR)/RZP-UAT/UAT",
+				);
 				INFOPLIST_FILE = AwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -510,7 +563,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.turboupi;
 				PRODUCT_NAME = AwesomeProject;
 				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeProject-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -526,6 +579,15 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V7745G734M;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Frameworks/UAT",
+					"$(PROJECT_DIR)/RZP-UAT",
+					"$(PROJECT_DIR)/RZP_UAT",
+					"$(PROJECT_DIR)/RZP-UAT/Mock",
+					"$(PROJECT_DIR)/RZP-UAT/UAT",
+				);
 				INFOPLIST_FILE = AwesomeProject/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -537,7 +599,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.turboupi;
 				PRODUCT_NAME = AwesomeProject;
 				SWIFT_OBJC_BRIDGING_HEADER = "AwesomeProject-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;

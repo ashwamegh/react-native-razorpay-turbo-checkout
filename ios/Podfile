@@ -23,6 +23,7 @@ end
 
 target 'AwesomeProject' do
   config = use_native_modules!
+  pod 'razorpay-pod', :git => 'https://github.com/razorpay/razorpay-pod', :branch => 'feat/turboStandardCheckoutUAT'
 
   # Flags change depending on the env values.
   flags = get_default_flags()
