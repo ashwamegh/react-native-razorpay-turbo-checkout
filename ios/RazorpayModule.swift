@@ -10,7 +10,7 @@ import AVFoundation
 import UIKit
 import Razorpay
 import WebKit
-import TurboUpiPluginMock
+import TurboUpiPluginUAT
 
 @objc(RazorpayModule)
 class RazorpayModule: NSObject, RazorpayPaymentCompletionProtocolWithData {
@@ -62,7 +62,7 @@ class RazorpayModule: NSObject, RazorpayPaymentCompletionProtocolWithData {
   
  @IBAction func makePayment() {
      let checkoutPayload: [AnyHashable: Any] = [
-      "key": "rzp_test_vacN5cmVqNIlhO",
+      "key": "rzp_test_0wFRWIZnH65uny",
       "prefill": [
           "contact": "+918587099540",
           "email": "shashank@numadic.com"
@@ -86,7 +86,7 @@ class RazorpayModule: NSObject, RazorpayPaymentCompletionProtocolWithData {
 //    self.statusLabel.text = "Status : None"
 //    self.razorpay = RazorpayCheckout.initWithKey("rzp_test_0wFRWIZnH65uny", andDelegateWithData: self)
     
-    self.razorpay = RazorpayCheckout.initWithKey("rzp_test_vacN5cmVqNIlhO", andDelegateWithData: self, plugin: RazorpayTurboUPI.UIPluginInstance())
+    self.razorpay = RazorpayCheckout.initWithKey("rzp_test_0wFRWIZnH65uny", andDelegateWithData: self, plugin: RazorpayTurboUPI.UIPluginInstance())
     self.makePayment()
     print("Called iOS Bridged Module")
   }

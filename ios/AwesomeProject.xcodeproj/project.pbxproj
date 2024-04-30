@@ -16,14 +16,16 @@
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		988C1ACE2B7B7654008EF5C4 /* RazorpayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C1ACD2B7B7654008EF5C4 /* RazorpayModule.swift */; };
 		988C1AD02B7B7825008EF5C4 /* RazorpayModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 988C1ACF2B7B7825008EF5C4 /* RazorpayModule.m */; };
-		98AF4C832BCE6A600028E9BD /* MockBankSDK.xcframework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */; };
-		98AF4C842BCE6A600028E9BD /* MockBankSDK.xcframework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98AF4C852BCE6A600028E9BD /* TurboUpiPluginMock.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */; };
-		98AF4C862BCE6A600028E9BD /* TurboUpiPluginMock.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98AF4C872BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */; };
-		98AF4C882BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		98AF4C892BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */; };
-		98AF4C8A2BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98F055EB2BE134AA0035931A /* RazorpayTurboUPIUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E62BE134AA0035931A /* RazorpayTurboUPIUI.framework */; };
+		98F055EC2BE134AA0035931A /* RazorpayTurboUPIUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E62BE134AA0035931A /* RazorpayTurboUPIUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98F055ED2BE134AA0035931A /* TurboUpiPluginUAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E72BE134AA0035931A /* TurboUpiPluginUAT.framework */; };
+		98F055EE2BE134AA0035931A /* TurboUpiPluginUAT.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E72BE134AA0035931A /* TurboUpiPluginUAT.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98F055EF2BE134AA0035931A /* OlivePayLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E82BE134AA0035931A /* OlivePayLibrary.framework */; };
+		98F055F02BE134AA0035931A /* OlivePayLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E82BE134AA0035931A /* OlivePayLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98F055F12BE134AA0035931A /* CommonLibrary.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E92BE134AA0035931A /* CommonLibrary.framework */; };
+		98F055F22BE134AA0035931A /* CommonLibrary.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E92BE134AA0035931A /* CommonLibrary.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		98F055F32BE134AA0035931A /* RazorpayTurboUPI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055EA2BE134AA0035931A /* RazorpayTurboUPI.framework */; };
+		98F055F42BE134AA0035931A /* RazorpayTurboUPI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055EA2BE134AA0035931A /* RazorpayTurboUPI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,10 +45,11 @@
 			dstPath = "";
 			dstSubfolderSpec = 10;
 			files = (
-				98AF4C882BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Embed Frameworks */,
-				98AF4C842BCE6A600028E9BD /* MockBankSDK.xcframework in Embed Frameworks */,
-				98AF4C862BCE6A600028E9BD /* TurboUpiPluginMock.framework in Embed Frameworks */,
-				98AF4C8A2BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Embed Frameworks */,
+				98F055EE2BE134AA0035931A /* TurboUpiPluginUAT.framework in Embed Frameworks */,
+				98F055F22BE134AA0035931A /* CommonLibrary.framework in Embed Frameworks */,
+				98F055F42BE134AA0035931A /* RazorpayTurboUPI.framework in Embed Frameworks */,
+				98F055F02BE134AA0035931A /* OlivePayLibrary.framework in Embed Frameworks */,
+				98F055EC2BE134AA0035931A /* RazorpayTurboUPIUI.framework in Embed Frameworks */,
 			);
 			name = "Embed Frameworks";
 			runOnlyForDeploymentPostprocessing = 0;
@@ -73,10 +76,11 @@
 		988C1ACC2B7B7654008EF5C4 /* AwesomeProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeProject-Bridging-Header.h"; sourceTree = "<group>"; };
 		988C1ACD2B7B7654008EF5C4 /* RazorpayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazorpayModule.swift; sourceTree = "<group>"; };
 		988C1ACF2B7B7825008EF5C4 /* RazorpayModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RazorpayModule.m; sourceTree = "<group>"; };
-		98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; name = MockBankSDK.xcframework; path = "RZP-UAT/Mock/MockBankSDK.xcframework"; sourceTree = "<group>"; };
-		98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TurboUpiPluginMock.framework; path = "RZP-UAT/Mock/TurboUpiPluginMock.framework"; sourceTree = "<group>"; };
-		98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazorpayTurboUPIUI_MockBankSDK.framework; path = "RZP-UAT/Mock/RazorpayTurboUPIUI_MockBankSDK.framework"; sourceTree = "<group>"; };
-		98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazorpayTurboUPI_MockBankSDK.framework; path = "RZP-UAT/Mock/RazorpayTurboUPI_MockBankSDK.framework"; sourceTree = "<group>"; };
+		98F055E62BE134AA0035931A /* RazorpayTurboUPIUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazorpayTurboUPIUI.framework; path = "RZP-UAT/UAT/RazorpayTurboUPIUI.framework"; sourceTree = "<group>"; };
+		98F055E72BE134AA0035931A /* TurboUpiPluginUAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TurboUpiPluginUAT.framework; path = "RZP-UAT/UAT/TurboUpiPluginUAT.framework"; sourceTree = "<group>"; };
+		98F055E82BE134AA0035931A /* OlivePayLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OlivePayLibrary.framework; path = "RZP-UAT/UAT/OlivePayLibrary.framework"; sourceTree = "<group>"; };
+		98F055E92BE134AA0035931A /* CommonLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CommonLibrary.framework; path = "RZP-UAT/UAT/CommonLibrary.framework"; sourceTree = "<group>"; };
+		98F055EA2BE134AA0035931A /* RazorpayTurboUPI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazorpayTurboUPI.framework; path = "RZP-UAT/UAT/RazorpayTurboUPI.framework"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,11 +96,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				98AF4C832BCE6A600028E9BD /* MockBankSDK.xcframework in Frameworks */,
-				98AF4C852BCE6A600028E9BD /* TurboUpiPluginMock.framework in Frameworks */,
+				98F055F12BE134AA0035931A /* CommonLibrary.framework in Frameworks */,
+				98F055ED2BE134AA0035931A /* TurboUpiPluginUAT.framework in Frameworks */,
+				98F055EB2BE134AA0035931A /* RazorpayTurboUPIUI.framework in Frameworks */,
 				0C80B921A6F3F58F76C31292 /* libPods-AwesomeProject.a in Frameworks */,
-				98AF4C872BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework in Frameworks */,
-				98AF4C892BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework in Frameworks */,
+				98F055F32BE134AA0035931A /* RazorpayTurboUPI.framework in Frameworks */,
+				98F055EF2BE134AA0035931A /* OlivePayLibrary.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -136,10 +141,11 @@
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				98AF4C7F2BCE6A600028E9BD /* MockBankSDK.xcframework */,
-				98AF4C822BCE6A600028E9BD /* RazorpayTurboUPI_MockBankSDK.framework */,
-				98AF4C812BCE6A600028E9BD /* RazorpayTurboUPIUI_MockBankSDK.framework */,
-				98AF4C802BCE6A600028E9BD /* TurboUpiPluginMock.framework */,
+				98F055E92BE134AA0035931A /* CommonLibrary.framework */,
+				98F055E82BE134AA0035931A /* OlivePayLibrary.framework */,
+				98F055EA2BE134AA0035931A /* RazorpayTurboUPI.framework */,
+				98F055E62BE134AA0035931A /* RazorpayTurboUPIUI.framework */,
+				98F055E72BE134AA0035931A /* TurboUpiPluginUAT.framework */,
 				5DCACB8F33CDC322A6C60F78 /* libPods-AwesomeProject.a */,
 				19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeProject-AwesomeProjectTests.a */,
 			);
