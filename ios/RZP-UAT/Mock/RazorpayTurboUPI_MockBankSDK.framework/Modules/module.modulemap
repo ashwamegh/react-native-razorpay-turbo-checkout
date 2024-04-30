@@ -1,0 +1,4 @@
+framework module RazorpayTurboUPI_MockBankSDK {
+  header "RazorpayTurboUPI_MockBankSDK-Swift.h"
+  requires objc
+}

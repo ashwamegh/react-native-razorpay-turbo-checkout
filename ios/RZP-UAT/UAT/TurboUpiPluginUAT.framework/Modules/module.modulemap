@@ -1,0 +1,4 @@
+framework module TurboUpiPluginUAT {
+  header "TurboUpiPluginUAT-Swift.h"
+  requires objc
+}

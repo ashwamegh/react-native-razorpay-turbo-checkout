@@ -1,0 +1,12 @@
+{
+  "actions": [
+    {
+      "action": "pay",
+      "input_data": {
+        "amount": 24
+      },
+      "description": "Timed Out",
+      "code": "U90"
+    }
+  ]
+}

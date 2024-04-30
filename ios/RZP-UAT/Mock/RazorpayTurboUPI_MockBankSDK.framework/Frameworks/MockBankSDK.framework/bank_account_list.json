@@ -1,0 +1,135 @@
+{
+    "accounts": [
+        {
+            "id": "1",
+            "bank_id": "1",
+            "ifsc": "AXIS0000001",
+            "masked_account_number": "xxxx0001",
+            "benificary_name": "Pratheek",
+            "creds": {
+                "upipin": {
+                    "length": 6,
+                    "set": false
+                },
+                "sms": {
+                    "length": 6
+                },
+                "atmpin": {
+                    "length": 4
+                }
+            },
+            "type": "SAVINGS",
+            "bank": {
+                "id": "1",
+                "name": "AXIS Bank",
+                "ifsc": "AXIS0000001",
+                "imageURL": ""
+            }
+        },
+        {
+            "id": "2",
+            "bank_id": "2",
+            "ifsc": "SBI00000001",
+            "masked_account_number": "xxxx0001",
+            "benificary_name": "Kushaal Singla",
+            "creds": {
+                "upipin": {
+                    "length": 6,
+                    "set": false
+                },
+                "sms": {
+                    "length": 6
+                },
+                "atmpin": {
+                    "length": 4
+                }
+            },
+            "type": "SAVINGS",
+            "bank": {
+                "id": "2",
+                "name": "SBI Bank",
+                "ifsc": "SBI00000001",
+                "imageURL": ""
+            }
+        },
+        {
+            "id": "3",
+            "bank_id": "2",
+            "ifsc": "SBI00000001",
+            "masked_account_number": "xxxx0203",
+            "benificary_name": "Kushaal Singla",
+            "creds": {
+                "upipin": {
+                    "length": 6,
+                    "set": true
+                },
+                "sms": {
+                    "length": 6
+                },
+                "atmpin": {
+                    "length": 4
+                }
+            },
+            "type": "SAVINGS",
+            "bank": {
+                "id": "2",
+                "name": "SBI Bank",
+                "ifsc": "SBI00000001",
+                "imageURL": ""
+            }
+        },
+        {
+            "id": "4",
+            "bank_id": "1",
+            "ifsc": "AXIS0000001",
+            "masked_account_number": "888888xxxxxxxx01",
+            "benificary_name": "Pratheek",
+            "creds": {
+                "upipin": {
+                    "length": 6,
+                    "set": false
+                },
+                "sms": {
+                    "length": 6
+                },
+                "atmpin": {
+                    "length": 4
+                }
+            },
+            "type": "CREDIT",
+            "bank": {
+                "id": "1",
+                "name": "AXIS Bank",
+                "ifsc": "AXIS0000001",
+                "imageURL": ""
+            }
+        },
+        {
+            "id": "5",
+            "bank_id": "2",
+            "ifsc": "SBI00000001",
+            "masked_account_number": "999999xxxxxxxx01",
+            "benificary_name": "Kushaal Singla",
+            "creds": {
+                "upipin": {
+                    "length": 6,
+                    "set": false
+                },
+                "sms": {
+                    "length": 6
+                },
+                "atmpin": {
+                    "length": 4
+                }
+            },
+            "type": "CREDIT",
+            "bank": {
+                "id": "2",
+                "name": "SBI Bank",
+                "ifsc": "SBI00000001",
+                "imageURL": ""
+            }
+        }
+    ]
+}
+

@@ -1,0 +1,28 @@
+{
+  "banks": [
+    {
+      "id": "1",
+      "name": "AXIS Bank",
+      "ifsc": "AXIS0000001",
+      "imageURL": ""
+    },
+    {
+      "id": "2",
+      "name": "SBI Bank",
+      "ifsc": "SBI00000001",
+      "imageURL": ""
+    },
+    {
+      "id": "3",
+      "name": "HDFC Bank",
+      "ifsc": "HDFC0000001",
+      "imageURL": ""
+    },
+    {
+      "id": "4",
+      "name": "Yes Bank",
+      "ifsc": "YES00000001",
+      "imageURL": ""
+    }
+  ]
+}

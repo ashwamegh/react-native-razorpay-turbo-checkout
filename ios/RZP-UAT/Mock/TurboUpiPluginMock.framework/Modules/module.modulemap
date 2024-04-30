@@ -1,0 +1,4 @@
+framework module TurboUpiPluginMock {
+  header "TurboUpiPluginMock-Swift.h"
+  requires objc
+}

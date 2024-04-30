@@ -1,0 +1,11 @@
+framework module MockBankSDK {
+  umbrella header "MockBankSDK.h"
+  export *
+
+  module * { export * }
+}
+
+module MockBankSDK.Swift {
+  header "MockBankSDK-Swift.h"
+  requires objc
+}

@@ -1,0 +1,227 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.9.2 (swiftlang-5.9.2.2.56 clang-1500.1.0.2.5)
+// swift-module-flags: -target arm64-apple-ios11.0 -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MockBankSDK
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import CoreData
+import CoreTelephony
+import DeveloperToolsSupport
+import Foundation
+@_exported import MockBankSDK
+import Swift
+import SwiftUI
+import UIKit
+import _Concurrency
+import _StringProcessing
+import _SwiftConcurrencyShims
+public typealias callback = (Any?, Foundation.NSError?) -> Swift.Void
+public typealias MockDictionary = Swift.Dictionary<Swift.String, Any>
+public typealias MockArrayDictionary = Swift.Array<Swift.Dictionary<Swift.String, Any>>
+@_hasMissingDesignatedInitializers public class MockBankSDKManager {
+  public static var shared: MockBankSDK.MockBankSDKManager
+  public func initialiseSDK(dict: MockBankSDK.MockDictionary, _ handler: @escaping MockBankSDK.callback)
+  public func getBankList(_ handler: @escaping MockBankSDK.callback)
+  public func getAccountList(iin: Swift.String, _ handler: @escaping MockBankSDK.callback)
+  public func addVPA(bankAccount: MockBankSDK.MockDictionary, vpa: Swift.String, _ handler: @escaping MockBankSDK.callback)
+  public func changePIn(bankAccount: MockBankSDK.MockDictionary, viewController: UIKit.UIViewController, _ handler: @escaping MockBankSDK.callback)
+  public func updatePin(isReset: Swift.Bool, cardDetails: Swift.String, expiry: Swift.String, bankAccount: MockBankSDK.MockDictionary, viewController: UIKit.UIViewController, _ handler: @escaping MockBankSDK.callback)
+  public func getVpaList(_ handler: @escaping MockBankSDK.callback)
+  public func sendMoney(payRequest: MockBankSDK.MockDictionary, merchatntTxnId: Swift.String, bankOrderID: Swift.String, viewController: UIKit.UIViewController, _ handler: @escaping MockBankSDK.callback)
+  public func enquireBalance(bankAccount: MockBankSDK.MockDictionary, viewController: UIKit.UIViewController, _ handler: @escaping MockBankSDK.callback)
+  public func delinkVpa(vpa: MockBankSDK.MockDictionary, _ handler: @escaping MockBankSDK.callback)
+  public func clearCache()
+  @objc deinit
+}
+@_inheritsConvenienceInitializers @objc(Action) public class Action : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension MockBankSDK.Action {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<MockBankSDK.Action>
+  @objc @NSManaged dynamic public var action: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var action_description: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var code: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var input_data: Swift.Dictionary<Swift.String, Any>? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(Bank) public class Bank : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension MockBankSDK.Bank {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<MockBankSDK.Bank>
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ifsc: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var imageURL: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var name: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(BankAccount) public class BankAccount : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension MockBankSDK.BankAccount {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<MockBankSDK.BankAccount>
+  @objc @NSManaged dynamic public var bank: Swift.Dictionary<Swift.String, Any>? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var bank_id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var benificary_name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var creds: Swift.Dictionary<Swift.String, Any>? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var ifsc: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var masked_account_number: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var type: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(BankDetails) public class BankDetails : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension MockBankSDK.BankDetails {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<MockBankSDK.BankDetails>
+  @objc @NSManaged dynamic public var accountId: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var active: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var address: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var atm_pin: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var balance: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var bank_account: Swift.Dictionary<Swift.String, Any>? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var beneficary_name: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var card_number: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var expiry: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var handle: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.Int32 {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var otp: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var outstanding: Swift.Double {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var upi_pin: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var username: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var validated: Swift.Bool {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var vpa: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
+@_inheritsConvenienceInitializers @objc(SIMSchema) public class SIMSchema : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension MockBankSDK.SIMSchema {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<MockBankSDK.SIMSchema>
+}
+@_inheritsConvenienceInitializers @objc(UpiAccounts) public class UpiAccounts : CoreData.NSManagedObject {
+  @objc override dynamic public init(entity: CoreData.NSEntityDescription, insertInto context: CoreData.NSManagedObjectContext?)
+  @objc deinit
+}
+extension MockBankSDK.UpiAccounts {
+  @nonobjc public class func fetchRequest() -> CoreData.NSFetchRequest<MockBankSDK.UpiAccounts>
+  @objc @NSManaged dynamic public var address: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var bank_account: Swift.Dictionary<Swift.String, Any>? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var handle: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var id: Swift.String? {
+    @objc get
+    @objc set
+  }
+  @objc @NSManaged dynamic public var username: Swift.String? {
+    @objc get
+    @objc set
+  }
+}
