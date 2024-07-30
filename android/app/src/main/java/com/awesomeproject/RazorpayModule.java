@@ -69,10 +69,6 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
         }
     }
 
-//    public static void openCheckout(Activity activity, JSONObject payload, RazorpayModule module) throws Exception {
-//        checkout.open(activity, payload);
-//    }
-
     public interface CheckoutCallback {
         void onCheckoutCompleted(boolean success, String paymentId, String errorMessage);
     }

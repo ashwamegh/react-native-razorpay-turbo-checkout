@@ -8,19 +8,23 @@ import android.view.Window;
 import android.view.WindowManager;
 
 import com.razorpay.Checkout;
+import com.razorpay.PaymentData;
+import com.razorpay.PaymentResultWithDataListener;
+import com.razorpay.ExternalWalletListener;
 
 import org.json.JSONException;
 import org.json.JSONObject;
 
-public class PaymentActivity extends Activity {
+
+public class PaymentActivity extends Activity  implements PaymentResultWithDataListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-//        requestWindowFeature(Window.FEATURE_NO_TITLE);
-//        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
-//                WindowManager.LayoutParams.FLAG_FULLSCREEN);
-//        getWindow().setBackgroundDrawableResource(android.R.color.transparent);
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,
+                WindowManager.LayoutParams.FLAG_FULLSCREEN);
+        getWindow().setBackgroundDrawableResource(android.R.color.transparent);
 
         String jsonString = getIntent().getStringExtra("options");
         JSONObject optionsJson;
@@ -41,6 +45,15 @@ public class PaymentActivity extends Activity {
         }
 
         checkout.open(this, optionsJson);
-//        finish();
+    }
+
+    @Override
+    public void onPaymentSuccess(String s, PaymentData paymentData) {
+        finish();
+    }
+
+    @Override
+    public void onPaymentError(int i, String s, PaymentData paymentData) {
+        finish();
     }
 }
