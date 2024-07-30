@@ -1,7 +1,13 @@
 package com.awesomeproject;
 
+import static android.app.Activity.RESULT_CANCELED;
+import static android.app.Activity.RESULT_OK;
+
+import static androidx.core.content.ContextCompat.startActivity;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.telecom.Call;
 import android.util.Log;
 
@@ -25,11 +31,6 @@ import com.razorpay.CheckoutActivity;
 import com.razorpay.PaymentData;
 import com.razorpay.PaymentResultWithDataListener;
 import com.razorpay.ExternalWalletListener;
-
-import android.os.Handler;
-
-import org.json.JSONArray;
-import org.json.JSONException;
 import org.json.JSONObject;
 
 public class RazorpayModule extends ReactContextBaseJavaModule implements ActivityEventListener, PaymentResultWithDataListener, ExternalWalletListener {
@@ -46,69 +47,38 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
     @NonNull
     @Override
     public String getName() {
-        return "RazorpayModule";
+        return "RNRazorpayCheckout";
     }
 
     @ReactMethod
-    public void printOrderAndAmount(String order_id, Float amount, Promise promise) {
-        Log.d("RazorpayModule","=============================================");
-        Log.d("RazorpayModule","Order ID: " + order_id + " Amount: " + amount);
-        Log.d("RazorpayModule","=============================================");
-//        Timeout for 2 seconds
-//        Handler handler = new Handler();
-//        handler.postDelayed(new Runnable() {
-//            @Override
-//            public void run() {
-//                // Code to execute after 2 seconds
-//                // Add your logic here
-//                promise.resolve("Order ID: " + order_id + " Amount: " + amount);
-//            }
-//        }, 5000);
-    }
-
-    @ReactMethod
-    public void open() {
-        Activity currentActivity = getCurrentActivity();
-
-        /**
-         * Pass your payment options to the Razorpay Checkout as a JSONObject
-         */
+    public void open(ReadableMap options) {
         try {
-            JSONObject options = new JSONObject();
-            options.put("key", "rzp_test_vacN5cmVqNIlhO");
-            options.put("currency", "INR");
-            options.put("amount", "10000");//pass amount in currency subunits
-            JSONObject prefillObj = new JSONObject();
-            prefillObj.put("email", "shashank@numadic.com");
-            prefillObj.put("contact", "8587099540");
-            options.put("prefill", prefillObj);
-            options.put("theme.color", "#FF7B05");
-            options.put("send_sms_hash", true);
-            JSONObject retryObj = new JSONObject();
-            retryObj.put("enabled", true);
-            retryObj.put("max_count", 4);
-            options.put("retry", retryObj);
-            options.put("disable_redesign_v15", false);
-            options.put("experiments.upi_turbo", true);
-            options.put("ep", "https://api-web-turbo-upi.ext.dev.razorpay.in/test/checkout.html");
+            Log.d("RazorpayCheckout","=============================================");
+            JSONObject payload = Utils.readableMapToJson(options);
+            Activity currentActivity = getCurrentActivity();
+            Log.d("RazorpayCheckout", "Options JSON: " + payload.toString());
 
-            Checkout checkout = new Checkout().upiTurbo(currentActivity);
-            if (options.has("key")) {
-                checkout.setKeyID(options.getString("key"));
-                options.remove("key");
+            Intent intent = new Intent(currentActivity, PaymentActivity.class);
+            intent.putExtra("options", payload.toString());
+            if (currentActivity != null) {
+                currentActivity.startActivityForResult(intent, Checkout.RZP_REQUEST_CODE);
             }
 
-            checkout.open(currentActivity, options);
-
         } catch(Exception e) {
-            Log.e("RazorpayModule", "Error in starting Razorpay Checkout", e);
+            Log.e("RazorpayCheckout", "Error in starting Razorpay Checkout", e);
         }
     }
 
+//    public static void openCheckout(Activity activity, JSONObject payload, RazorpayModule module) throws Exception {
+//        checkout.open(activity, payload);
+//    }
+
+    public interface CheckoutCallback {
+        void onCheckoutCompleted(boolean success, String paymentId, String errorMessage);
+    }
+
     private void sendEvent(String eventName, WritableMap params) {
-        reactContext
-                .getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class)
-                .emit(eventName, params);
+        reactContext.getJSModule(DeviceEventManagerModule.RCTDeviceEventEmitter.class).emit(eventName, params);
     }
 
     public void onActivityResult(Activity activity, int requestCode, int resultCode, Intent data) {
@@ -146,4 +116,5 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
     public void onExternalWalletSelected(String s, PaymentData paymentData) {
         sendEvent("Razorpay::EXTERNAL_WALLET_SELECTED", Utils.jsonToWritableMap(paymentData.getData()));
     }
+
 }

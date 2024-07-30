@@ -26,9 +26,7 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
-import {NativeModules} from 'react-native';
-
-const {RazorpayModule} = NativeModules;
+import RazorpayCheckout from './RazorpayCheckout';
 
 type SectionProps = PropsWithChildren<{
   title: string;
@@ -76,26 +74,34 @@ function App(): JSX.Element {
     // );
     // console.log(res);
     const data = {
-      amount: 10000,
+      key: 'rzp_test_0wFRWIZnH65uny',
       currency: 'INR',
+      name: 'eToll by ICICI Bank',
+      amount: '1000', // Ensure this is the correct amount in the smallest currency unit
       prefill: {
-        contact: '9731585653',
-        email: 'vivekshindherzp@gmail.com',
+        email: 'shashank@numadic.com',
+        contact: '8587099540',
       },
-      theme: {
-        color: '#0CA72F',
-      },
+      theme: {color: '#FF7B05'},
       send_sms_hash: true,
-      retry: {
-        enabled: false,
-        max_count: 4,
-      },
+      retry: {enabled: true, max_count: 4},
       disable_redesign_v15: false,
       'experiments.upi_turbo': true,
-      ep: 'https://api-web-turbo-upi.ext.dev.razorpay.in/test/checkout.html?branch=feat/upi-turbo',
+      ep: 'https://api-web-turbo-upi.ext.dev.razorpay.in/test/checkout.html',
+      description: 'Credits towards eToll Addon tag payment',
+      image: 'https://etoll-assets.s3.ap-south-1.amazonaws.com/925004492s.jpeg',
     };
     console.log('Calling Razorpay Checkout');
-    RazorpayModule.open();
+
+    RazorpayCheckout.open(data)
+      .then((data: any) => {
+        // handle success
+        console.log(`Success: ${data.razorpay_payment_id}`);
+      })
+      .catch((error: any) => {
+        // handle failure
+        console.error(`Error: ${error.code} | ${error.description}`);
+      });
   };
 
   return (
