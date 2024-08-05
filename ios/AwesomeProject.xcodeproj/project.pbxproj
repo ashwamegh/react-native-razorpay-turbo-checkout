@@ -14,8 +14,8 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		7699B88040F8A987B510C191 /* libPods-AwesomeProject-AwesomeProjectTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-AwesomeProject-AwesomeProjectTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		988C1ACE2B7B7654008EF5C4 /* RazorpayModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 988C1ACD2B7B7654008EF5C4 /* RazorpayModule.swift */; };
-		988C1AD02B7B7825008EF5C4 /* RazorpayModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 988C1ACF2B7B7825008EF5C4 /* RazorpayModule.m */; };
+		9855D7862C61321300B46386 /* RazorpayModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 9855D7852C61321300B46386 /* RazorpayModule.m */; };
+		9855D7892C61327300B46386 /* RazorpayEventEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 9855D7882C61327300B46386 /* RazorpayEventEmitter.m */; };
 		98F055EB2BE134AA0035931A /* RazorpayTurboUPIUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E62BE134AA0035931A /* RazorpayTurboUPIUI.framework */; };
 		98F055EC2BE134AA0035931A /* RazorpayTurboUPIUI.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E62BE134AA0035931A /* RazorpayTurboUPIUI.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		98F055ED2BE134AA0035931A /* TurboUpiPluginUAT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 98F055E72BE134AA0035931A /* TurboUpiPluginUAT.framework */; };
@@ -73,9 +73,10 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-AwesomeProject.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-AwesomeProject.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = AwesomeProject/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig"; path = "Target Support Files/Pods-AwesomeProject-AwesomeProjectTests/Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig"; sourceTree = "<group>"; };
-		988C1ACC2B7B7654008EF5C4 /* AwesomeProject-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "AwesomeProject-Bridging-Header.h"; sourceTree = "<group>"; };
-		988C1ACD2B7B7654008EF5C4 /* RazorpayModule.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RazorpayModule.swift; sourceTree = "<group>"; };
-		988C1ACF2B7B7825008EF5C4 /* RazorpayModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RazorpayModule.m; sourceTree = "<group>"; };
+		9855D7842C6131D100B46386 /* RazorpayModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RazorpayModule.h; sourceTree = "<group>"; };
+		9855D7852C61321300B46386 /* RazorpayModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RazorpayModule.m; sourceTree = "<group>"; };
+		9855D7872C61325F00B46386 /* RazorpayEventEmitter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RazorpayEventEmitter.h; sourceTree = "<group>"; };
+		9855D7882C61327300B46386 /* RazorpayEventEmitter.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RazorpayEventEmitter.m; sourceTree = "<group>"; };
 		98F055E62BE134AA0035931A /* RazorpayTurboUPIUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = RazorpayTurboUPIUI.framework; path = "RZP-UAT/UAT/RazorpayTurboUPIUI.framework"; sourceTree = "<group>"; };
 		98F055E72BE134AA0035931A /* TurboUpiPluginUAT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = TurboUpiPluginUAT.framework; path = "RZP-UAT/UAT/TurboUpiPluginUAT.framework"; sourceTree = "<group>"; };
 		98F055E82BE134AA0035931A /* OlivePayLibrary.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OlivePayLibrary.framework; path = "RZP-UAT/UAT/OlivePayLibrary.framework"; sourceTree = "<group>"; };
@@ -162,15 +163,13 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				988C1ACF2B7B7825008EF5C4 /* RazorpayModule.m */,
-				988C1ACD2B7B7654008EF5C4 /* RazorpayModule.swift */,
+				9855D78A2C61338600B46386 /* RazorpayModule */,
 				13B07FAE1A68108700A75B9A /* AwesomeProject */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* AwesomeProjectTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
-				988C1ACC2B7B7654008EF5C4 /* AwesomeProject-Bridging-Header.h */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -184,6 +183,17 @@
 				00E356EE1AD99517003FC87E /* AwesomeProjectTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9855D78A2C61338600B46386 /* RazorpayModule */ = {
+			isa = PBXGroup;
+			children = (
+				9855D7882C61327300B46386 /* RazorpayEventEmitter.m */,
+				9855D7872C61325F00B46386 /* RazorpayEventEmitter.h */,
+				9855D7852C61321300B46386 /* RazorpayModule.m */,
+				9855D7842C6131D100B46386 /* RazorpayModule.h */,
+			);
+			path = RazorpayModule;
 			sourceTree = "<group>";
 		};
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
@@ -462,9 +472,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				988C1ACE2B7B7654008EF5C4 /* RazorpayModule.swift in Sources */,
-				988C1AD02B7B7825008EF5C4 /* RazorpayModule.m in Sources */,
+				9855D7892C61327300B46386 /* RazorpayEventEmitter.m in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				9855D7862C61321300B46386 /* RazorpayModule.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -484,7 +494,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-AwesomeProject-AwesomeProjectTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
@@ -516,7 +525,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-AwesomeProject-AwesomeProjectTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				FRAMEWORK_SEARCH_PATHS = (

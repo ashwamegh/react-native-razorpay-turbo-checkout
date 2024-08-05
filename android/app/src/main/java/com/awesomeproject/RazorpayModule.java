@@ -47,7 +47,7 @@ public class RazorpayModule extends ReactContextBaseJavaModule implements Activi
     @NonNull
     @Override
     public String getName() {
-        return "RNRazorpayCheckout";
+        return "RNRazorpayModule";
     }
 
     @ReactMethod
